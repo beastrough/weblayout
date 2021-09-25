@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "Muller";
+  src: url("./fonts/MullerBold.woff2");
+  src: local("MullerBold"), local("Muller Bold"),
+  url("../fonts/MullerBold.woff2") format("woff2"),
+  url("../fonts/MullerBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerLight.woff2");
+  src: local("MullerLight"), local("Muller Light"),
+  url("../fonts/MullerLight.woff2") format("woff2"),
+  url("../fonts/MullerLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerMedium.woff2");
+  src: local("MullerMedium"), local("Muller Medium"),
+  url("../fonts/MullerMedium.woff2") format("woff2"),
+  url("../fonts/MullerMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerRegular.woff2");
+  src: local("MullerRegular"), local("Muller Regular"),
+  url("../fonts/MullerRegular.woff2") format("woff2"),
+  url("../fonts/MullerRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Muller", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+}
+
+.header-data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: block;
+  margin-right: 40px;
+}
+
+.phone {
+  display: block;
+}
+
+.account-link {
+  display: block;
+  padding-left: 30px;
+  font-size: 16px;
+  background-position: left center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  display: block;
+  margin-right: 45px;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.button-list  {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button-item {
+  display: block;
+  margin-right: 40px;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.button-item:last-child {
+  margin-right: 0;
+}
+
+.special-offers-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.special-offers-item {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 49%;
+  background-position: left top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.section-services-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.section-services-item {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 49%;
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.section-advantages-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.section-advantages-item {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 23%;
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.section-advantages-item:not(:last-child) {
+  margin-right: 23px;
+}
+
+.section-advantages-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.section-hotels-list{
+  display: block;
+  font-size: 0;
+}
+
+.section-hotels-item {
+  display: inline-block;
+  width: 374px;
+  font-size: 16px;
+  vertical-align: top;
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.section-hotels-item:not(:last-child) {
+  margin-right: 23px;
+  margin-bottom: 23px;
+}
+
+.section-hotels-item:nth-child(3n) {
+  margin-right: 0;
+}
