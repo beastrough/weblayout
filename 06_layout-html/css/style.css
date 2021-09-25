@@ -158,10 +158,16 @@ body {
   display: block;
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 49%;
+  width: 49%;
+  overflow-wrap: break-word;
   background-position: left top;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.section-about {
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .section-services-list {
@@ -174,7 +180,8 @@ body {
   display: block;
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 49%;
+  width: 49%;
+  overflow-wrap: break-word;
   background-position: center top;
   background-size: contain;
   background-repeat: no-repeat;
@@ -190,7 +197,8 @@ body {
   display: block;
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 23%;
+  width: 23%;
+  overflow-wrap: break-word;
   background-position: center top;
   background-size: contain;
   background-repeat: no-repeat;
@@ -214,9 +222,7 @@ body {
   width: 374px;
   font-size: 16px;
   vertical-align: top;
-  background-position: center top;
-  background-size: contain;
-  background-repeat: no-repeat;
+  overflow-wrap: break-word;
 }
 
 .section-hotels-item:not(:last-child) {
