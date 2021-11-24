@@ -39,6 +39,7 @@
 }
 
 :root {
+  --color-super-light-yellow: #ffcc66;
   --color-light-yellow: #cc9933;
   --color-dark-yellow: #a47312;
   --color-white: #fff;
@@ -256,16 +257,16 @@ body {
   cursor: pointer;
 }
 
+.button:focus {
+  color: var(--color-white);
+  background-color: var(--color-light-yellow);
+}
+
 .button:hover {
   color: var(--color-white);
   transition-property: color, background-color;
   transition-duration: 600ms, 300ms;
   transition-timing-function: ease-in-out;
-  background-color: var(--color-light-yellow);
-}
-
-.button:focus {
-  color: var(--color-white);
   background-color: var(--color-light-yellow);
 }
 
@@ -406,10 +407,6 @@ body {
   background-image: linear-gradient(to right, var(--color-dark-blue), var(--color-more-dark-blue));
 }
 
-.section-special-offers__blocks-list-item:hover {
-  background-image: linear-gradient(to right, var(--color-dark-blue), var(--color-more-dark-blue));
-}
-
 .section-special-offers__container-rigt-arrow {
   position: relative;
   z-index: 10;
@@ -450,16 +447,8 @@ body {
   z-index: -1;
 }
 
-.section-special-offers__blocks-list-item_background_img-sea {
-  background-image: url("../img/Maldives.png");
-}
-
-.section-special-offers__blocks-list-item_background_img-pool {
-  background-image: url("../img/Krit.png");
-}
-
-.section-special-offers__blocks-list-item_background_img-pillows {
-  background-image: url("../img/Suit.png");
+.section-special-offers__blocks-list-item_background_linear {
+  background-image: linear-gradient(to right, var(--color-dark-blue), var(--color-more-dark-blue));
 }
 
 .section-special-offers__blocks-list-item_width {
@@ -519,55 +508,17 @@ body {
   background-image: url("../img/row-yellow.svg");
 }
 
-.section-services__blocks-list-item_background_img-champagne {
-  background-image: url("../img/champagne.png");
+.img-row-light-yellow {
+  color: var(--color-super-light-yellow);
+  background-image: url("../img/rigt-arrow-light-yellow.svg");
 }
 
-.section-services__blocks-list-item_background_img-room {
-  background-image: url("../img/rooms.png");
-}
-
-.section-services__blocks-list-item_background_img-swimming-pool {
-  background-image: url("../img/pools.png");
-}
-
-.section-services__blocks-list-item_background_img-cars {
-  background-image: url("../img/cars.png");
+.section-services__blocks-list-item_background_linear {
+  background-image: linear-gradient(to bottom, var(--color-black-blue) 50%, var(--color-white) 50%);
 }
 
 .section-services__container-rigt-arrow {
   position: relative;
-}
-
-.section-services__container-rigt-arrow:hover {
-  color: #e9c479;
-  background-image: url(../img/transparent_yellow_array.svg);
-}
-
-.section-services__container-rigt-arrow:hover::before {
-  content: "";
-  position: absolute;
-  top: -191px;
-  left: -45px;
-  display: block;
-  width: 573px;
-  height: 168px;
-  background-color: var(--color-black-blue);
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-}
-
-.section-services__container-rigt-arrow:focus::before {
-  content: "";
-  position: absolute;
-  top: -191px;
-  left: -45px;
-  display: block;
-  width: 573px;
-  height: 168px;
-  background-color: var(--color-black-blue);
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
 }
 
 .section-services__container-rigt-arrow:focus::after {
@@ -781,12 +732,12 @@ body {
 .section-hotels-more {
   position: relative;
   display: inline-block;
+  padding-top: 373px;
   width: 374px;
   height: 440px;
-  font-size: 20px;
-  line-height: 40px;
-  font-weight: 500;
+  font-size: 0;
   vertical-align: top;
+  text-align: center;
   overflow-wrap: break-word;
   overflow: hidden;
   background-position: center top;
@@ -826,16 +777,18 @@ body {
 }
 
 .section-hotels__container-rigt-arrow {
-  position: absolute;
-  top: 373px;
-  left: 54px;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .section-hotels__container-rigt-arrow::before {
   content: "";
   position: absolute;
-  top: -373px;
-  left: -54px;
+  top: 0;
+  left: 0;
   display: block;
   width: 373px;
   height: 440px;
@@ -843,26 +796,12 @@ body {
 
 .section-special-offers__container-rigt-arrow:hover {
   transform: none;
+  padding-right: 15px;
+  color: var(--color-super-light-yellow);
 }
 
 .section-special-offers__container-rigt-arrow:focus {
   outline-width: 0;
-}
-
-.section-special-offers__container-rigt-arrow:focus::before {
-  content: "";
-  position: absolute;
-  top: -202px;
-  left: -40px;
-  display: block;
-  width: 573px;
-  height: 258px;
-  border-radius: 15px;
-  background-image: url("../img/row-yellow.svg"), linear-gradient(to right, var(--color-dark-blue), var(--color-more-dark-blue));
-  background-size: 11px 11px, cover;
-  background-position: left 129px bottom 43px, left center;
-  background-repeat: no-repeat;
-  z-index: -1;
 }
 
 .section-special-offers__container-rigt-arrow:active {
@@ -876,26 +815,12 @@ body {
 
 .section-special-offers__container-rigt-arrow_height:hover {
   transform: none;
+  padding-right: 15px;
+  color: var(--color-super-light-yellow);
 }
 
 .section-special-offers__container-rigt-arrow_height:focus {
   outline-width: 0;
-}
-
-.section-special-offers__container-rigt-arrow_height:focus::before {
-  content: "";
-  position: absolute;
-  top: -485px;
-  left: -40px;
-  display: block;
-  width: 573px;
-  height: 540px;
-  border-radius: 15px;
-  background-image: url("../img/row-yellow.svg"), linear-gradient(to right, var(--color-dark-blue), var(--color-more-dark-blue));
-  background-size: 11px 11px, cover;
-  background-position: left 129px bottom 42px, left center;
-  background-repeat: no-repeat;
-  z-index: -1;
 }
 
 .section-special-offers__container-rigt-arrow_height:active {
@@ -908,6 +833,16 @@ body {
 }
 
 .section-services__container-rigt-arrow:hover {
+  padding-right: 15px;
+  color: var(--color-super-light-yellow);
+  background-image: url("../img/rigt-arrow-light-yellow.svg");
+  transform: none;
+}
+
+.section-services__container-rigt-arrow:active {
+  padding-right: 12px;
+  color: var(--color-dark-yellow);
+  background-image: url("../img/row-yellow.svg");
   transform: none;
 }
 
@@ -1172,11 +1107,11 @@ body {
   fill: var(--color-grey-basic);
 }
 
-.social-link:hover .social-link-icon-part {
+.social-link:focus .social-link-icon-part {
   fill: var(--color-light-yellow);
 }
 
-.social-link:focus .social-link-icon-part {
+.social-link:hover .social-link-icon-part {
   fill: var(--color-light-yellow);
 }
 
