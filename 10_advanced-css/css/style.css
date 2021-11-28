@@ -49,8 +49,8 @@
   --color-black: #000;
   --color-black-blue: #2a2736;
   --color-black-grey: #333;
-  --color-dark-blue: #2f3C52;
-  --color-more-dark-blue: #2a2836;
+  --color-dark-blue: #304059D6;
+  --color-more-dark-blue: #35415300;
 }
 
 * {
@@ -63,14 +63,14 @@ a {
   cursor: pointer;
 }
 
-a:hover {
-  color: var(--color-light-yellow);
-}
-
 a:focus {
   color: var(--color-light-yellow);
   outline: 1px solid var(--color-light-yellow);
   outline-offset: 5px;
+}
+
+a:hover {
+  color: var(--color-light-yellow);
 }
 
 a:active {
@@ -404,12 +404,29 @@ body {
   background-position: left center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: linear-gradient(to right, var(--color-dark-blue), var(--color-more-dark-blue));
 }
 
 .section-special-offers__container-rigt-arrow {
   position: relative;
   z-index: 10;
+  color: var(--color-super-light-yellow);
+}
+
+.section-special-offers__container-rigt-arrow::after {
+  content: "";
+  position: absolute;
+  top: -202px;
+  left: -40px;
+  z-index: -1;
+  display: block;
+  width: 581px;
+  height: 258px;
+  border-radius: 15px;
+  background-image: url("../img/rigt-arrow-light-yellow.svg"), linear-gradient(to left, var(--color-more-dark-blue), var(--color-dark-blue));
+  background-size: 11px 11px, contain;
+  background-repeat: no-repeat;
+  background-position: left 137px bottom 43px, left center;
+  transform: translateX(-8px);
 }
 
 .section-special-offers__container-rigt-arrow:focus::after {
@@ -417,19 +434,39 @@ body {
   position: absolute;
   top: -202px;
   left: -40px;
+  z-index: -1;
   display: block;
   width: 573px;
   height: 258px;
+  border-radius: 0;
   outline-width: 1px;
   outline-style: solid;
   outline-color: var(--color-light-yellow);
   outline-offset: 7px;
-  z-index: -1;
+  background-image: none;
+  transform: none;
 }
 
 .section-special-offers__container-rigt-arrow_height {
   position: relative;
   z-index: 10;
+  color: var(--color-super-light-yellow);
+}
+
+.section-special-offers__container-rigt-arrow_height:after {
+  content: "";
+  position: absolute;
+  top: -485px;
+  left: -40px;
+  z-index: -1;
+  display: block;
+  width: 573px;
+  height: 540px;
+  border-radius: 15px;
+  background-image: url("../img/rigt-arrow-light-yellow.svg"), linear-gradient(to bottom, var(--color-more-dark-blue), var(--color-dark-blue));
+  background-size: 11px 11px, contain;
+  background-repeat: no-repeat;
+  background-position: left 129px bottom 42px, bottom center;
 }
 
 .section-special-offers__container-rigt-arrow_height:focus::after {
@@ -437,18 +474,17 @@ body {
   position: absolute;
   top: -485px;
   left: -40px;
+  z-index: -1;
   display: block;
   width: 573px;
   height: 540px;
+  border-radius: 0;
   outline-width: 1px;
   outline-style: solid;
   outline-color: var(--color-light-yellow);
   outline-offset: 7px;
-  z-index: -1;
-}
-
-.section-special-offers__blocks-list-item_background_linear {
-  background-image: linear-gradient(to right, var(--color-dark-blue), var(--color-more-dark-blue));
+  background-image: none;
+  transform: none;
 }
 
 .section-special-offers__blocks-list-item_width {
@@ -511,10 +547,6 @@ body {
 .img-row-light-yellow {
   color: var(--color-super-light-yellow);
   background-image: url("../img/rigt-arrow-light-yellow.svg");
-}
-
-.section-services__blocks-list-item_background_linear {
-  background-image: linear-gradient(to bottom, var(--color-black-blue) 50%, var(--color-white) 50%);
 }
 
 .section-services__container-rigt-arrow {
@@ -798,38 +830,65 @@ body {
   transform: none;
   padding-right: 15px;
   color: var(--color-super-light-yellow);
+  z-index: 20;
 }
 
 .section-special-offers__container-rigt-arrow:focus {
   outline-width: 0;
+  color: var(--color-super-light-yellow);
 }
 
 .section-special-offers__container-rigt-arrow:active {
   color: var(--color-white);
 }
 
+.section-special-offers__container-rigt-arrow:hover::after {
+  content: "";
+  position: absolute;
+  top: -202px;
+  left: -40px;
+  z-index: -1;
+  display: block;
+  width: 573px;
+  height: 258px;
+  background-image: none;
+  transform: none;
+}
+
 .section-special-offers__container-rigt-arrow:active::after {
   content: "";
   outline-width: 0;
+  background-image: none;
+  transform: none;
 }
 
 .section-special-offers__container-rigt-arrow_height:hover {
-  transform: none;
+  z-index: 20;
   padding-right: 15px;
   color: var(--color-super-light-yellow);
+  transform: none;
 }
 
 .section-special-offers__container-rigt-arrow_height:focus {
   outline-width: 0;
+  color: var(--color-super-light-yellow);
 }
 
 .section-special-offers__container-rigt-arrow_height:active {
   color: var(--color-white);
 }
 
+.section-special-offers__container-rigt-arrow_height:hover::after {
+  content: "";
+  background-image: none;
+  transform: none;
+}
+
 .section-special-offers__container-rigt-arrow_height:active::after {
   content: "";
   outline-width: 0;
+  background-image: none;
+  transform: none;
 }
 
 .section-services__container-rigt-arrow:hover {
@@ -1117,4 +1176,32 @@ body {
 
 .social-link:active .social-link-icon-part {
   fill: var(--color-dark-yellow);
+}
+
+.img-maldives {
+  background-image: url("../img/Maldives.png");
+}
+
+.img-suit {
+  background-image: url("../img/Krit.png");
+}
+
+.img-pillows {
+  background-image: url("../img/Suit.png");
+}
+
+.img-champagne {
+  background-image: url("../img/champagne.png");
+}
+
+.img-table {
+  background-image: url("../img/rent.png");
+}
+
+.img-pool {
+  background-image: url("../img/pools.png");
+}
+
+.img-cars {
+  background-image: url("../img/cars.png");
 }
