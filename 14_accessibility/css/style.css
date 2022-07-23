@@ -88,6 +88,10 @@ ul {
   outline-offset: 6px;
 }
 
+.burger {
+  display: none;
+}
+
 .burger__list {
   display: none;
 }
@@ -194,7 +198,9 @@ ul {
 }
 
 .search__button:focus {
-  outline: 2px solid #ff9900;
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: #ff9900;
   outline-offset: 7px;
 }
 
@@ -270,6 +276,11 @@ ul {
   width: 15px;
   height: 15px;
   background-color: #ffffff66;
+}
+
+.swiper-pagination-bullet:focus {
+  outline: 2px solid #ff9900;
+  outline-offset: 2px;
 }
 
 .swiper-pagination-bullet-active { /*поведение чекбокса при наведении*/
@@ -732,15 +743,6 @@ ul {
   border-bottom: 1px solid #cacaca;
 }
 
-.accordion-item:focus {
-  border-color: #ff9900;
-  outline-width: 0;
-}
-
-.accordion-item:focus + .accordion-item {
-  border-top-color: #ff9900;
-}
-
 .accordion-item:hover {
   border-color: #ff9900;
 }
@@ -827,6 +829,12 @@ a.ui-button:active,
   min-height: 111px;
   font-size: 24px;
   line-height: 32px;
+  outline-width: 0 !important;
+}
+
+.ui-accordion .ui-accordion-header:focus {
+  outline-style: none;
+  -moz-outline-style: none;
 }
 
 .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
@@ -1187,13 +1195,16 @@ a.ui-button:active,
 
   .burger {
     display: block;
+    margin: 0;
+    padding: 0;
     width: 30px;
     height: 23px;
     border-width: 0;
-    background-size: contain;
+    background-size: 30px 23px;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url("../img/burger.svg");
+    background-color: transparent;
     cursor: pointer;
   }
 
