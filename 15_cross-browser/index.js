@@ -74,6 +74,21 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  document.querySelectorAll('.ui-accordion-header').forEach(function(elem) {
+    elem.addEventListener('focus', function() {
+      this.style.outlineWidth = "0";
+      this.parentNode.style.borderColor = "#ff9900";
+      this.parentNode.nextElementSibling.style.borderTopColor = "#ff9900";
+    });
+  });
+
+  document.querySelectorAll('.ui-accordion-header').forEach(function(elem) {
+    elem.addEventListener('blur', function() {
+      this.parentNode.style.borderColor = "#cacaca";
+      this.parentNode.nextElementSibling.style.borderTopColor = "#cacaca";
+    });
+  });
+
   const pos = document.querySelector('.swiper-pagination');
   pos.style.bottom = '30px';
 
@@ -170,5 +185,18 @@ function search__deactivator() {
   document.querySelector('#site_search').setAttribute('tabindex', '-1');
 
   document.querySelector('#search__activator').setAttribute('tabindex', '0');
+
+  document.querySelector('#search__activator').querySelectorAll('.search__icon-part_fill').forEach(function(icon) {
+    icon.style.fill = '';
+  });
+  document.querySelector('#search__activator').querySelectorAll('.search__icon-part_stroke').forEach(function(icon) {
+    icon.style.stroke = '';
+  });
+  document.querySelector('#search__deactivator').querySelectorAll('.search__icon-part_fill').forEach(function(icon) {
+    icon.style.fill = '';
+  });
+  document.querySelector('#search__deactivator').querySelectorAll('.search__icon-part_stroke').forEach(function(icon) {
+    icon.style.stroke = '';
+  });
 
   }
