@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>База знаний</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="Choices-master/public/assets/styles/choices.min.css">
+  <link rel="shortcut icon" type="image/svg" href="./img/check.svg">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <style>
+    [class*="ground-pane"] {
+      filter: grayscale(1);
+    }
+
+    .simplebar-scrollbar:before {
+      position: absolute;
+      content: '';
+      background: #ccb26e;
+      border-radius: 7px;
+      left: 2px;
+      right: 2px;
+      opacity: 0;
+      transition: opacity 0.2s linear;
+    }
+
+    .simplebar-scrollbar.simplebar-visible:before {
+      /* When hovered, remove all transitions from drag handle */
+      opacity: 1;
+      transition: opacity 0s linear;
+    }
+
+    .js-validate-error-label {
+      margin-bottom: 4px;
+      padding-left: 20px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-size: 12px;
+      line-height: 14px;
+      color: #FF5C00 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="main">
+    <div class="container">
+      <form action="" method="POST" class="holder">
+        <fieldset class="fieldset-content">
+          <legend class="title">Категории:</legend>
+          <label for="check-1" class="option" tabindex="0">
+            <input checked type="checkbox" id="check-1" class="option__native">
+            <div class="option__custom" role="checkbox"></div>
+            Динозавры
+          </label>
+          <label for="check-2" class="option" tabindex="0">
+            <input type="checkbox" id="check-2" class="option__native">
+            <div class="option__custom" role="checkbox"></div>
+            Медведи
+          </label>
+          <label for="check-3" class="option" tabindex="0">
+            <input type="checkbox" id="check-3" class="option__native">
+            <div class="option__custom" role="checkbox"></div>
+            Косули
+          </label>
+          <label for="check-4" class="option" tabindex="0">
+            <input type="checkbox" id="check-4" class="option__native">
+            <div class="option__custom" role="checkbox"></div>
+            Лисы
+          </label>
+          <label for="check-5" class="option" tabindex="0">
+            <input type="checkbox" id="check-5" class="option__native">
+            <div class="option__custom" role="checkbox"></div>
+            Волки
+          </label>
+          <label for="check-6" class="option" tabindex="0">
+            <input type="checkbox" id="check-6" class="option__native">
+            <div class="option__custom" role="checkbox"></div>
+            Олени и лоси
+          </label>
+        </fieldset>
+      </form>
+      <select name="select">
+        <option>Древесина</option>
+        <option>Металл</option>
+        <option>Камень</option>
+        <option>Пластик</option>
+        <option>Композитный</option>
+        <option>Гипс</option>
+      </select>
+      <div id="map" style="width: 460px; min-width: 460px; height: 460px; margin-right: 58px;"></div>
+      <p class="text-block" data-simplebar data-simplebar-scrollbar-max-size="70" data-simplebar-auto-hide="false"
+        id="custom-scroll">Сложно сказать, почему многие известные личности представлены в исключительно положительном
+        свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими
+        инстанциями. Мы вынуждены отталкиваться от того, что высокотехнологичная концепция общественного уклада
+        представляет собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения,
+        гласящая примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные
+        особенности картины в целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем
+        настолько очевидна, что социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно
+        открывает новые горизонты для первоочередных требований.
+      </p>
+      <form action="" method="POST" class="form">
+        <input data-validate-field="name" id="name" placeholder="Имя*" type="text" class="form__data">
+        <input data-validate-field="phone" placeholder="Телефон*" type="tel" class="form__data">
+        <input data-validate-field="mail" placeholder="E-mail*" type="email" class="form__data">
+        <input type="submit" class="form__button" value="Заказать">
+      </form>
+      <div class="text-block text-block_width text-block_height text-block_padding">Следует отметить, что
+        социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+        <div class="tooltip">
+          <div class="marker" tabindex="0"></div>
+          <div class="popup">Глава 2, страница 176</div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="Choices-master/public/assets/scripts/choices.min.js"></script>
+  <script>
+    const element = document.querySelector('select');
+    const choices = new Choices(element, {
+      searchEnabled: false,
+      shouldSort: false
+    });
+    document.querySelector('.choices__list--single').querySelector('.choices__item').innerHTML = "Материал";
+  </script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  <script src="Just-validate-1/dist/js/just-validate.min.js"></script>
+  <script src="Inputmask-5.x/dist/inputmask.min.js"></script>
+  <script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init() {
+      // Создание карты.
+      var myMap = new ymaps.Map("map", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [48.872185073737896, 2.354223999999991],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 12
+      });
+      myPlacemarkWithContent = new ymaps.Placemark([48.872185073737896, 2.354223999999991], {}, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#imageWithContent',
+        // Своё изображение иконки метки.
+        iconImageHref: 'img/location.svg',
+        // Размеры метки.
+        iconImageSize: [28, 40],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-24, -24]
+      });
+      myMap.geoObjects.add(myPlacemarkWithContent);
+
+      var selector = document.querySelector("input[type='tel']");
+      var im = new Inputmask("+7(999) 999-99-99");
+      im.mask(selector);
+
+      new JustValidate('.form', {
+        rules: {
+          name: {
+            required: true,
+            minLength: 1,
+            maxLength: 100
+          },
+          phone: {
+            required: true,
+            function: () => {
+              const phone = selector.inputmask.unmaskedvalue();
+              alert(phone);
+              return Number(phone) && phone.length === 10
+            }
+          },
+          mail: {
+            required: true,
+            email: true
+          },
+        },
+        messages: {
+          name: {
+            required: 'Вы не ввели имя'
+          },
+          phone: {
+            required: 'Вы не ввели телефон',
+            "function": "Некорректный телефон"
+          },
+          mail: {
+            email: "Некорректный e-mail",
+            required: 'Вы не ввели e-mail'
+          }
+        }
+      })
+    }
+  </script>
+</body>
+
+</html>
