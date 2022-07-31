@@ -220,34 +220,6 @@ ul {
   background-color: #ff5c00;
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.popup {
-  position: absolute;
-  top: -35px;
-  left: -66px;
-  display: none;
-  width: 163px;
-  padding: 7px 15px 8px 15px;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 600;
-  color: #fff;
-  background-color: #666;
-}
-
-.popup::after {
-  content: '';
-  position: absolute; /* Абсолютное позиционирование */
-  left: 70px;
-  bottom: -10px; /* Положение треугольника */
-  border: 4px solid transparent;
-  border-top: 9px solid #666;
-}
-
 .marker {
   display: inline-block;
   margin: 0;
@@ -273,16 +245,4 @@ ul {
 
 .marker:active {
   background-image: url("../img/tooltip_active.svg");
-}
-
-.marker:focus + .popup {
-  display: block;
-}
-
-.marker:hover + .popup {
-  display: block;
-}
-
-.marker:active + .popup {
-  display: block;
 }

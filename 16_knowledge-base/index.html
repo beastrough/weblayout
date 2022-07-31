@@ -111,10 +111,7 @@
       </form>
       <div class="text-block text-block_width text-block_height text-block_padding">Следует отметить, что
         социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
-        <div class="tooltip">
-          <div class="marker" tabindex="0"></div>
-          <div class="popup">Глава 2, страница 176</div>
-        </div>
+        <div class="marker" id="marker" tabindex="0"></div>
       </div>
     </div>
   </main>
@@ -130,6 +127,8 @@
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
   <script src="Just-validate-1/dist/js/just-validate.min.js"></script>
   <script src="Inputmask-5.x/dist/inputmask.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
   <script type="text/javascript">
     // Функция ymaps.ready() будет вызвана, когда
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
@@ -198,8 +197,35 @@
           }
         }
       })
+
+      tippy('#marker', {
+
+        content: 'Глава 2, страница 176',
+        maxWidth: 163,
+        appendTo: 'parent',
+        theme: '#666',
+        offset: [0, 15]
+      });
     }
   </script>
+  <style>
+    .tippy-box {
+      padding: 7px 15px 8px 15px;
+      border-radius: 0;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 600;
+      color: #fff;
+      background-color: #666;
+    }
+    .tippy-arrow::before {
+      border-top-color: #666 !important;
+      transform: scale(1, 1.5);
+    }
+    .tippy-content {
+      padding: 0;
+    }
+  </style>
 </body>
 
 </html>
